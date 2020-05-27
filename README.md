@@ -7,5 +7,3 @@
 언어 : Java
 
 WAS : Tomcat(Servlet/Jsp)
-
-## 시작하기 앞서
