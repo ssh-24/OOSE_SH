@@ -41,5 +41,4 @@ public class DBConnector {
     public void setRes(ResultSet res) {
         this.res = res;
     }
-    public void setPstmt(PreparedStatement pstmt){this.pstmt=pstmt;}
 }
