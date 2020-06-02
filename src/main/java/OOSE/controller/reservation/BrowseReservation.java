@@ -32,7 +32,7 @@ public class BrowseReservation extends HttpServlet {
         try {
             Reservation[] list = reservationDBManager.browseReservation(keyword, tmp);
             req.setAttribute("list", list);
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/view/reservation/reservationBrowse.jsp");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("view/reservation/reservationBrowse.jsp");
             dispatcher.forward(req,resp);
         } catch (Exception e){
             e.printStackTrace();

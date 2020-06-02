@@ -1,7 +1,7 @@
 /*
 작성 일자: 2020.05.26
 작성자: 김해준
-내용: Reservation 예약 시 필요 속성
+내용: Reservation
 산출물 기준: CD-102
 */
 package OOSE.db;
@@ -17,15 +17,16 @@ public class ReservationDBManager extends DBConnector {
     private int authority;
 
     public Reservation[] browseReservation(String keyword, int option) throws SQLException {
-        query = "SELECT oose.reservation.*, oose.member.phoneNumber FROM oose.reservation, oose.member";
+        query = "SELECT oose.reservation.*, oose.member.phoneNumber FROM oose.reservation, oose.member ";
 
-        String condition1 = "where userId=(select memberId from oose.member where memberName = ?)";
-        String condition2 = "where accommodationId=(select accommodationId from oose.accommodation where accommodationName = ?)";
+        String condition1 = "where userId=(select memberId from oose.member where memberName = ?) ";
+        String condition2 = "where accommodationId=(select accommodationId from oose.accommodation where accommodationName = ?) ";
 
         if (option == 1) query += condition1; // according to option
         else if(option == 2) query += condition2;
-        query += "group by reservationId";
 
+        query += "group by reservationId";
+        System.out.println(query);
         pstmt = conn.prepareStatement(query);
         if(option!=0) pstmt.setString(1, keyword);
 
@@ -37,7 +38,7 @@ public class ReservationDBManager extends DBConnector {
                     res.getString(7), res.getInt(8), res.getString(9),
                     res.getInt(10)));
         }
-        return (Reservation[])data.toArray();
+        return data.toArray();
 
     }
     public boolean registerReservation(Reservation reservation) throws SQLException{
@@ -94,10 +95,6 @@ public class ReservationDBManager extends DBConnector {
     }
     public boolean deleteReservationCancle(){
         return false;
-    }
-
-    public Model.Member[] browseMember(){ // 구현하지 않음
-        return null;
     }
 
     public boolean checkAuthority(){ // 구현하지 않음
