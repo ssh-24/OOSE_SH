@@ -7,19 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1df10d67-b921-41a9-8dba-3c1a572b48d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/main_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/main_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/main_war_exploded/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OOSE/controller/AuthorityManagement/AuthorityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOSE/controller/AuthorityManagement/AuthorityController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -208,29 +213,6 @@
             <expand />
             <select />
           </treeState>
-        </serviceView>
-        <serviceView id="Tomcat 9.0.35">
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-          <option name="isSelected" value="true" />
-          <option name="viewType" value="services" />
-          <option name="roots">
-            <list>
-              <ServiceState>
-                <option name="path">
-                  <list>
-                    <option value="Run Dashboard" />
-                    <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" />
-                    <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory/Running" />
-                    <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory/Tomcat 9.0.35" />
-                  </list>
-                </option>
-                <option name="contributor" value="com.intellij.execution.dashboard.RunDashboardServiceViewContributor" />
-              </ServiceState>
-            </list>
-          </option>
         </serviceView>
       </list>
     </option>

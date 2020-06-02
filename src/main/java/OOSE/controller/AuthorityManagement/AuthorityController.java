@@ -16,7 +16,7 @@ public class AuthorityController extends HttpServlet{
 
     @Override
     public void init(ServletConfig sc) throws ServletException{
-
+//        test
     }
 
     @Override
