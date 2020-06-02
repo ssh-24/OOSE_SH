@@ -78,12 +78,12 @@
     <div class="content">
         <table border="1">
             <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
+                <th>No.</th>
+                <th>시설명</th>
+                <th>시설 상태</th>
+                <th>시설 담당자</th>
+                <th>전화번호</th>
+                <th>선택</th>
             </tr>
             <tr>
                 <th></th>

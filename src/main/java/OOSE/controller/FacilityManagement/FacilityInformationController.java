@@ -2,7 +2,9 @@ package OOSE.controller.FacilityManagement;
 import OOSE.Model.*;
 import OOSE.Database.FacilityDBManager;
 
-public class FacilityInformationController {
+import javax.servlet.http.HttpServlet;
+
+public class FacilityInformationController extends HttpServlet {
     FacilityDBManager dbManager = new FacilityDBManager();
 
     boolean facilityInformationRegister(String s) {

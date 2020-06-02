@@ -4,6 +4,8 @@ import OOSE.Model.*;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FacilityDBManager {
     DBConnector conn;
@@ -22,8 +24,8 @@ public class FacilityDBManager {
             return conn.pstmt.execute();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     public boolean modifyFacilityInfo(String s) {
@@ -36,8 +38,8 @@ public class FacilityDBManager {
             return conn.pstmt.execute();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     public boolean deleteFacilityInfo(String s) {
@@ -48,17 +50,30 @@ public class FacilityDBManager {
             return conn.pstmt.execute();
         }catch(SQLException throwables) {
             throwables.printStackTrace();
+            return false;
         }
-        return false;
     }
 
-    //arraylist안쓰니까 상당히 불편,,
     public String[] browseFacilityInfo() {
-
-        String[] temp = new String[3];
-        return temp;
+        String query = "SELECT facilityName FROM oose.facility";
+        try {
+            conn.pstmt = conn.conn.prepareStatement(query);
+            conn.res = conn.pstmt.executeQuery();
+            List<String> temp = new ArrayList<String>();
+            while(conn.res.next()) {
+                String name = conn.res.getString("facilityName");
+                temp.add(name);
+            }
+            String[] info = new String[temp.size()];
+            info = temp.toArray(info);
+            return info;
+        }catch(SQLException throwables) {
+            throwables.printStackTrace();
+            return null;
+        }
     }
 
+    //변경
     public boolean checkAutority(String s) {
         String query = "SELECT autority FROM manager WHERE managerName";
         try {
@@ -71,6 +86,7 @@ public class FacilityDBManager {
         return false;
     }
 
+    //변경
     public boolean checkDuplicateInfo(String s) {
         String query = "SELECT * FROM oose.facility GROUP BY facilityName HAVING COUNT(facilityName) > 1";
         try {
