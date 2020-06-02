@@ -4,7 +4,7 @@
 내용: jdbc util
 산출물 기준: CD-001
 */
-package Database;
+package OOSE.db;
 
 import java.sql.*;
 
