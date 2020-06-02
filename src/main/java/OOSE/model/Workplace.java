@@ -18,6 +18,21 @@ public class Workplace {
     private String closingTime;
     private int square;
 
+
+    public Workplace(int id, String name, String manager, String address, String phoneNumber, String status, int fee, String openingTime, String closingTime, int square) {
+        this.id = id;
+        this.name = name;
+        this.manager = manager;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.status = status;
+        this.fee = fee;
+        this.openingTime = openingTime;
+        this.closingTime = closingTime;
+        this.square = square;
+    }
+
+
     public int getId() {
         return id;
     }
