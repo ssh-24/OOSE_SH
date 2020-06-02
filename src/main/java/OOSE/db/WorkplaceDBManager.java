@@ -33,13 +33,5 @@ public class WorkplaceDBManager {
                 workplaces[i]=workplaceVector.get(i);
             }
             return workplaces;
-
-
-
-
     }
-
-
-
-
 }
