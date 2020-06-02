@@ -32,7 +32,7 @@
                     <div id="top-menu">
                         <ul class="navbar-nav">
                             <li>
-                                <a href="#">회원</a>
+                                <a href="/memberMenuView.jsp">회원</a>
                             </li>
                             <li>
                                 <a href="#">권한</a>
